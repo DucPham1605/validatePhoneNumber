@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate số điện thoại</title>
+</head>
+<body>
+<script>
+    let regExp = /^\([0-9]{2}\)-\(0[0-9]{9}\)$/
+    function isPhoneNumber(phone_number) {
+        if(regExp.test(phone_number)){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    let num = "(84)-(0978489648)";
+    console.log(isPhoneNumber(num));
+    num = "(a8)-(22222222)";
+    console.log(isPhoneNumber(num));
+</script>
+</body>
+</html>
